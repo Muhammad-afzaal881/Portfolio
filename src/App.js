@@ -1,13 +1,21 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Image from './components/Image'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+import Home from './components/Home';
+import Projects from './components/Project';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <Image/>
-      <Footer/>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/project" element={<Projects />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 

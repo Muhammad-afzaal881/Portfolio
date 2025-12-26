@@ -1,4 +1,4 @@
-import Me from './me.jpg'
+import Me from './me.jpeg'
 import './Image.css'
 function Image(){
     return(
