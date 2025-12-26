@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Home from './components/Home';
 import Projects from './components/Project';
@@ -11,6 +11,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Navigate to="/home" />} /> {/* root redirect */}
         <Route path="/home" element={<Home />} />
         <Route path="/project" element={<Projects />} />
       </Routes>
